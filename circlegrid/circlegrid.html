@@ -5,11 +5,31 @@
     <link rel="stylesheet" type="text/css" href="circlestyle.css" />
     <script type="text/javascript" src="paper-full.js"></script>
     <script type="text/paperscript" canvas="myCanvas">
-      for(var i = 0; i < 1000; i++) {
-          console.log("the i", i)
-          var myCircle = new Path.Circle(new Point(i * 60, 50), 10);
-          myCircle.fillColor = "red";
-      }
+      function onKeyDown(event) {
+          var maxPoint = new Point(view.size.height, view.size.width);
+          var randomPoint = Point.random();
+
+          // A point between {x:0, y:0} and {x:100, y:100}:
+          var point = maxPoint * randomPoint;
+            text.content = 'The ' + event.key + ' key was pressed!';
+            new Path.Circle(new Point(point), 10).fillColor = "red";
+
+          console.log(Point.random());
+          console.log(view.size);
+
+      };
+
+      var text = new PointText({
+          point: view.center,
+          content: 'Click here to focus and then press some keys.',
+          justification: 'center',
+          fontSize: 10,
+
+      });
+
+      text.style = {
+        fillColor: 'rgb(247, 247, 239)',
+      };
     </script>
   </head>
   <body>
