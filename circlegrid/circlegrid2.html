@@ -9,30 +9,37 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"
     ></script>
     <script type="text/paperscript" canvas="myCanvas">
-      var sound1 = new Howl({
-      src: ['sounds/bubbles.mp3']
-      });
-      var sound2 = new Howl({
-      src: ['sounds/clay.mp3']
-      });
+      var keyData = {
+        a: {
+          color: "purple";
+          sound: new Howl({
+          src: ['sounds/bubbles.mp3']
+          });
+        }
+        b: {
+          color: "blue";
+          sound: new Howl({
+          src: ['sounds/clay.mp3']
+          });
+        }
+        c: {
+          color: "red";
+          sound: new Howl({
+          src: ['sounds/confetti.mp3']
+          });
+        }
+      }
 
       var circles = [];
 
       function onKeyDown(event) {
 
-
       var maxPoint = new Point(view.size.width, view.size.height);
       var randomPoint = Point.random();
       var point = maxPoint * randomPoint;
       var newCircle = new Path.Circle(point, 200);
-      if (event.key === "a") {
-      sound1.play();
-      newCircle.fillColor = "orange";
-      }
-      if (event.key === "s") {
-      sound2.play();
-      newCircle.fillColor = "blue";
-      }
+      newCircle.fillColor = keyData[event.key].color;
+
       circles.push(newCircle);
       text.content = 'The ' + event.key + ' key was pressed!';
       }
