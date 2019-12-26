@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Ratatap</title>
+    <link rel="stylesheet" type="text/css" href="circlestyle.css" />
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+      var snares = {
+
+      q:    {
+        sound: new Howl({
+          src: ['sounds/snare.mp3']
+        }),
+        color: '#1abc9c'
+      },
+      w: {
+      sound: new Howl({
+      src: ['sounds/snare2.mp3']
+      }),
+      color: '#2ecc71'
+      },
+      e: {
+      sound: new Howl({
+      src: ['sounds/snare3.mp3']
+      }),
+      color: '#3498db'
+      },
+      r: {
+      sound: new Howl({
+      src: ['sounds/snapclap2.mp3']
+      }),
+      color: '#9b59b6'
+      },
+      t: {
+      sound: new Howl({
+      src: ['sounds/dotted-spiral.mp3']
+      }),
+      color: '#34495e'
+      },
+      y: {
+      sound: new Howl({
+      src: ['sounds/flash-1.mp3']
+      }),
+      color: '#16a085'
+      },
+      u: {
+      sound: new Howl({
+      src: ['sounds/flash-2.mp3']
+      }),
+      color: '#27ae60'
+      },
+      a: {
+      sound: new Howl({
+      src: ['sounds/snare4.mp3']
+      }),
+      color: '#f1c40f'
+      },
+      s: {
+      sound: new Howl({
+      src: ['sounds/snare5.mp3']
+      }),
+      color: '#e67e22'
+      },
+      d: {
+      sound: new Howl({
+      src: ['sounds/snareglitch.mp3']
+      }),
+      color: '#e74c3c'
+      },
+      f: {
+      sound: new Howl({
+      src: ['sounds/snapclap.mp3']
+      }),
+      color: '#95a5a6'
+      },
+      g: {
+      sound: new Howl({
+      src: ['sounds/prism-2.mp3']
+      }),
+      color: '#f39c12'
+      },
+      h: {
+      sound: new Howl({
+      src: ['sounds/prism-3.mp3']
+      }),
+      color: '#d35400'
+      },};
+
+        var hiHats = {
+
+  i: {
+  sound: new Howl({
+    src: ['sounds/hihat1.mp3']
+  }),
+  color: '#2980b9'
+  },
+  o: {
+  sound: new Howl({
+  src: ['sounds/hatopen3.mp3']
+  }),
+  color: '#8e44ad'
+  },
+  p: {
+  sound: new Howl({
+    src: ['sounds/hihat3.mp3']
+  }),
+  color: '#2c3e50'
+  },
+  j: {
+  sound: new Howl({
+    src: ['sounds/hihat4.mp3']
+  }),
+  color: '#1abc9c'
+  },
+  k: {
+  sound: new Howl({
+    src: ['sounds/hihat5.mp3']
+  }),
+  color: '#2ecc71'
+  },
+  l: {
+  sound: new Howl({
+    src: ['sounds/hishake.mp3']
+  }),
+  color: '#3498db'
+  },
+  ";": {
+      sound: new Howl({
+      src: ['sounds/hatopen4.mp3']
+      }),
+      color: '#9b59b6'
+      },
+  "''": {
+      sound: new Howl({
+      src: ['sounds/hatopen2.mp3']
+      }),
+      color: '#9b59b6'
+      },
+  };
+  var kicks = {
+      z: {
+      sound: new Howl({
+      src: ['sounds/kick5.mp3']
+      }),
+      color: '#9b59b6'
+      },
+      x: {
+      sound: new Howl({
+      src: ['sounds/kick9.mp3']
+      }),
+      color: '#34495e'
+      },
+      c: {
+      sound: new Howl({
+      src: ['sounds/kick11.mp3']
+      }),
+      color: '#16a085'
+      },
+      v: {
+      sound: new Howl({
+      src: ['sounds/kick4.mp3']
+      }),
+      color: '#27ae60'
+      },
+      b: {
+  sound: new Howl({
+    src: ['sounds/kick6.mp3']
+  }),
+  color: '#2980b9'
+  },
+  n: {
+  sound: new Howl({
+  src: ['sounds/kick7.mp3']
+  }),
+  color: '#8e44ad'
+  },
+  m: {
+  sound: new Howl({
+    src: ['sounds/kick8.mp3']
+  }),
+  color: '#2c3e50'
+  },
+  ",": {
+      sound: new Howl({
+      src: ['sounds/kick1.mp3']
+      }),
+      color: '#9b59b6'
+      },
+  ".": {
+      sound: new Howl({
+      src: ['sounds/kick2.mp3']
+      }),
+      color: '#9b59b6'
+      },
+      }
+    
+    var decagons = [];
+    var circles = [];
+    var triangles = [];
+    
+
+    function onKeyDown(event) {
+    if (snares[event.key]) {
+    var maxPoint = new Point(view.size.width/3, view.size.height*0.6);
+    var randomPoint = Point.random();
+    var point = maxPoint * randomPoint;
+    var newDecagon = new Path.RegularPolygon(point, 8, 75);
+    newDecagon.fillColor = snares[event.key].color;
+    snares[event.key].sound.play();
+    decagons.push(newDecagon);
+    text.content = event.key;
+    }
+
+    if (hiHats[event.key]) {
+    var pointX = view.size.width/3*Math.random()+ view.size.width/3*2;
+    var pointY = view.size.height*Math.random();
+    var point = new Point(pointX, pointY);
+    var newTriangle = new Path.RegularPolygon(point, 3, 75);
+    newTriangle.fillColor = hiHats[event.key].color;
+    hiHats[event.key].sound.play();
+    triangles.push(newTriangle);
+    text.content = event.key;
+    }
+
+    if (kicks[event.key]) {
+    var pointX = view.size.width/3*Math.random()+ view.size.width/3;
+    var pointY = view.size.height*(Math.random()*(0.80 - 0.4) + 0.5);
+    var point = new Point(pointX, pointY);
+    var newCircle = new Path.Circle(point, 200);
+    newCircle.fillColor = kicks[event.key].color;
+    kicks[event.key].sound.play();
+    circles.push(newCircle);
+    text.content = event.key;
+    }};
+
+    function onFrame(event) {
+    for(var i = 0; i < circles.length; i++) {
+    circles[i].fillColor.hue += 0.75;
+    circles[i].scale(.95);
+    }
+
+    for(var i = 0; i < triangles.length; i++) {
+    triangles[i].fillColor.hue += 0.75;
+    triangles[i].scale(.96);
+    }
+    for(var i = 0; i < decagons.length; i++) {
+    decagons[i].fillColor.hue += 0.75;
+    decagons[i].scale(.90);
+    }
+}
+
+    var text = new PointText({
+    point: view.center,
+    content: 'Press some keys from A - Z',
+    justification: 'center',
+    fontSize: 20,
+
+    });
+
+    text.style = {
+    fillColor: 'rgb(247, 247, 239)',
+    };
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+
+</html>
