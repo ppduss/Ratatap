@@ -9,7 +9,7 @@
     <script type="text/paperscript" canvas="myCanvas">
       var snares = {
 
-      q:    {
+      q: {
         sound: new Howl({
           src: ['sounds/snare.mp3']
         }),
@@ -320,7 +320,7 @@
     newDecagon.fillColor = snares[event.key].color;
     snares[event.key].sound.play();
     decagons.push(newDecagon);
-    text.content = event.key;
+    text.content = [];
     };
 
 
@@ -332,10 +332,9 @@
     newSpark.fillColor = glitches[event.key].color;
     glitches[event.key].sound.play();
     sparks.push(newSpark);
-    text.content = event.key;
+    text.content = []
 
     var count = 100;
-
     var path = new Path.Circle({
 	    center: [0, 0],
 	    radius: 9,
@@ -360,7 +359,7 @@
     newTriangle.fillColor = hiHats[event.key].color;
     hiHats[event.key].sound.play();
     triangles.push(newTriangle);
-    text.content = event.key;
+    text.content = []
     }
 
     if (kicks[event.key]) {
@@ -371,8 +370,22 @@
     newCircle.fillColor = kicks[event.key].color;
     kicks[event.key].sound.play();
     circles.push(newCircle);
-    text.content = event.key;
+    text.content = [""]
     }};
+
+
+
+    var text = new PointText({
+    point: view.center,
+    content: 'Mash on the keyboard to make fresh beats',
+    justification: 'center',
+    fontSize: 22,
+
+    });
+
+    text.style = {
+    fillColor: 'rgb(247, 247, 239)',
+    };
 
     function onFrame(event) {
     for(var i = 0; i < circles.length; i++) {
@@ -391,24 +404,14 @@
     sparks[i].fillColor.hue += 0.75;
     sparks[i].scale(.85);
     }
+    
+
   //   for(var i = 0; i < splash.length; i++) {
   //  splash[i].fillColor.hue += 0.75;
   //   splash[i].scale(.85);
   //   }
 
 }
-
-    var text = new PointText({
-    point: view.center,
-    content: 'Press some keys from A - Z',
-    justification: 'center',
-    fontSize: 20,
-
-    });
-
-    text.style = {
-    fillColor: 'rgb(247, 247, 239)',
-    };
     </script>
   </head>
 

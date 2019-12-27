@@ -1,6 +1,9 @@
 body {
     background: rgb(44, 32, 32);
+}
 
+text {
+    color: brown;
 }
 
 #myCanvas {
