@@ -1,76 +1,77 @@
 
 
+
       var snares = {
 
       q: {
-        sound: new Howl({
-          src: ['sounds/snare.mp3']
-        }),
-        color: '#1abc9c'
+      sound: new Howl({
+      src: ['./sounds/snare.mp3']
+      }),
+      color: '#1abc9c'
       },
       w: {
       sound: new Howl({
-      src: ['sounds/snare2.mp3']
+      src: ['./sounds/snare2.mp3']
       }),
       color: '#2ecc71'
       },
       e: {
       sound: new Howl({
-      src: ['sounds/snare3.mp3']
+      src: ['./sounds/snare3.mp3']
       }),
       color: '#3498db'
       },
       r: {
       sound: new Howl({
-      src: ['sounds/snapclap2.mp3']
+      src: ['./sounds/snapclap2.mp3']
       }),
       color: '#9b59b6'
       },
       a: {
       sound: new Howl({
-      src: ['sounds/snare4.mp3']
+      src: ['./sounds/snare4.mp3']
       }),
       color: '#f1c40f'
       },
       s: {
       sound: new Howl({
-      src: ['sounds/snare5.mp3']
+      src: ['./sounds/snare5.mp3']
       }),
       color: '#e67e22'
       },
       d: {
       sound: new Howl({
-      src: ['sounds/snare10.mp3']
+      src: ['./sounds/snare10.mp3']
       }),
       color: '#e74c3c'
       },
       f: {
       sound: new Howl({
-      src: ['sounds/snapclap.mp3']
+      src: ['./sounds/snapclap.mp3']
       }),
       color: '#95a5a6'
       },
       t: {
       sound: new Howl({
-      src: ['sounds/snare6.mp3']
+      src: ['./sounds/snare6.mp3']
       }),
       color: '#95a5a6'
       },
       g: {
       sound: new Howl({
-      src: ['sounds/snare8.mp3']
+      src: ['./sounds/snare8.mp3']
       }),
       color: '#34495e'
       },
       h: {
       sound: new Howl({
-      src: ['sounds/snare9.mp3']
+      src: ['./sounds/snare9.mp3']
       }),
       color: '#34495e'
       },
       y: {
       sound: new Howl({
-      src: ['sounds/snare7.mp3']
+      src: ['./sounds/snare7.mp3']
       }),
       color: '#34495e'
       },
@@ -79,219 +80,218 @@
       var glitches = {
         "`": {
       sound: new Howl({
-      src: ['sounds/confetti.mp3']
+      src: ['./sounds/confetti.mp3']
       }),
       color: '#34495e'
       },
       
       1: {
       sound: new Howl({
-      src: ['sounds/glitch.mp3']
+      src: ['./sounds/glitch.mp3']
       }),
       color: '#34495e'
       },
       2: {
       sound: new Howl({
-      src: ['sounds/glitch2.mp3']
+      src: ['./sounds/glitch2.mp3']
       }),
       color: '#16a085'
       },
       3: {
       sound: new Howl({
-      src: ['sounds/glitch6.mp3']
+      src: ['./sounds/glitch6.mp3']
       }),
       color: '#27ae60'
       },
       4: {
       sound: new Howl({
-      src: ['sounds/glitch4.mp3']
+      src: ['./sounds/glitch4.mp3']
       }),
       color: '#f39c12'
       },
       5: {
       sound: new Howl({
-      src: ['sounds/glitch5.mp3']
+      src: ['./sounds/glitch5.mp3']
       }),
       color: '#d35400'
       },
       6: {
       sound: new Howl({
-      src: ['sounds/can1.mp3']
+      src: ['./sounds/can1.mp3']
       }),
       color: '#f39c12'
       },
       7: {
       sound: new Howl({
-      src: ['sounds/can2.mp3']
+      src: ['./sounds/can2.mp3']
       }),
       color: '#d35400'
       },
       8: {
       sound: new Howl({
-      src: ['sounds/pop.mp3']
+      src: ['./sounds/pop.mp3']
       }),
       color: '#d35400'
       },
       9: {
       sound: new Howl({
-      src: ['sounds/pop2.mp3']
+      src: ['./sounds/pop2.mp3']
       }),
       color: '#f39c12'
       },
       0: {
       sound: new Howl({
-      src: ['sounds/pop3.mp3']
+      src: ['./sounds/pop3.mp3']
       }),
       color: '#d35400'
       },
       "-": {
       sound: new Howl({
-      src: ['sounds/piston-1.mp3']
+      src: ['./sounds/piston-1.mp3']
       }),
       color: '#f39c12'
       },
       "=": {
       sound: new Howl({
-      src: ['sounds/piston-2.mp3']
+      src: ['./sounds/piston-2.mp3']
       }),
       color: '#d35400'
       },
       };
 
 
-        var hiHats = {
-
+  var hiHats = {
   i: {
   sound: new Howl({
-    src: ['sounds/hihat1.mp3']
+    src: ['./sounds/hihat1.mp3']
   }),
   color: '#2980b9'
   },
   o: {
   sound: new Howl({
-  src: ['sounds/hatopen3.mp3']
+  src: ['./sounds/hatopen3.mp3']
   }),
   color: '#8e44ad'
   },
   p: {
   sound: new Howl({
-    src: ['sounds/hihat3.mp3']
+    src: ['./sounds/hihat3.mp3']
   }),
   color: '#2c3e50'
   },
   j: {
   sound: new Howl({
-    src: ['sounds/shaker.mp3']
+    src: ['./sounds/shaker.mp3']
   }),
   color: '#1abc9c'
   },
   k: {
   sound: new Howl({
-    src: ['sounds/hihat5.mp3']
+    src: ['./sounds/hihat5.mp3']
   }),
   color: '#2ecc71'
   },
   l: {
   sound: new Howl({
-    src: ['sounds/hishake.mp3']
+    src: ['./sounds/hishake.mp3']
   }),
   color: '#3498db'
   },
   ";": {
       sound: new Howl({
-      src: ['sounds/hatopen4.mp3']
+      src: ['./sounds/hatopen4.mp3']
       }),
       color: '#9b59b6'
       },
   "''": {
       sound: new Howl({
-      src: ['sounds/hatopen2.mp3']
+      src: ['./sounds/hatopen2.mp3']
       }),
       color: '#9b59b6'
       },
   "[": {
       sound: new Howl({
-      src: ['sounds/hatopen.mp3']
+      src: ['./sounds/hatopen.mp3']
       }),
       color: '#9b59b6'
       },
   "]": {
       sound: new Howl({
-      src: ['sounds/cymbal.mp3']
+      src: ['./sounds/cymbal.mp3']
       }),
       color: '#9b59b6'
       },
   "u": {
       sound: new Howl({
-      src: ['sounds/hihat7.mp3']
+      src: ['./sounds/hihat7.mp3']
       }),
       color: '#9b59b6'
       },
   "'": {
       sound: new Howl({
-      src: ['sounds/hihat6.mp3']
+      src: ['./sounds/hihat6.mp3']
       }),
       color: '#9b59b6'
       },
   };
-var kicks = {
+  var kicks = {
   z: {
     sound: new Howl({
-      src: ['sounds/kick10.mp3']
+      src: ['./sounds/kick10.mp3']
     }),
     color: '#9b59b6'
   },
   x: {
     sound: new Howl({
-      src: ['sounds/kick9.mp3']
+      src: ['./sounds/kick9.mp3']
     }),
     color: '#34495e'
   },
   c: {
     sound: new Howl({
-      src: ['sounds/kick11.mp3']
+      src: ['./sounds/kick11.mp3']
     }),
     color: '#16a085'
   },
   v: {
     sound: new Howl({
-      src: ['sounds/kick4.mp3']
+      src: ['./sounds/kick4.mp3']
     }),
     color: '#27ae60'
   },
   b: {
     sound: new Howl({
-      src: ['sounds/kick6.mp3']
+      src: ['./sounds/kick6.mp3']
     }),
     color: '#2980b9'
   },
   n: {
     sound: new Howl({
-      src: ['sounds/kick7.mp3']
+      src: ['./sounds/kick7.mp3']
     }),
     color: '#8e44ad'
   },
   m: {
     sound: new Howl({
-      src: ['sounds/kick8.mp3']
+      src: ['./sounds/kick8.mp3']
     }),
     color: '#2c3e50'
   },
   ",": {
     sound: new Howl({
-      src: ['sounds/kick12.mp3']
+      src: ['./sounds/kick12.mp3']
     }),
     color: '#9b59b6'
   },
   ".": {
     sound: new Howl({
-      src: ['sounds/kick13.mp3']
+      src: ['./sounds/kick13.mp3']
     }),
     color: '#9b59b6'
   },
   "/": {
     sound: new Howl({
-      src: ['sounds/kick14.mp3']
+      src: ['./sounds/kick14.mp3']
     }),
     color: '#9b59b6'
   },
@@ -327,7 +327,6 @@ var kicks = {
 	    center: [0, 0],
 	    radius: Math.random() * (45 - 7) + 7,
 	    fillColor: 'black',
-	    <!-- strokeColor: '#303030' -->
     });
     
     // newSpark.fillColor = glitches[event.key].color;
