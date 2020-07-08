@@ -322,7 +322,6 @@
     var pointY = view.size.height*(Math.random()*(0.40 - 0.1) + 0.1);
     var point = new Point(pointX, pointY);
     var count = Math.random() * (50 - 20) + 20;
-    console.log(count);
     var newSpark = new Path.Circle({
 	    center: [0, 0],
 	    radius: Math.random() * (45 - 7) + 7,
@@ -341,7 +340,6 @@
 	    var placedSymbol = symbol.place(center);
 	    placedSymbol.scale(i / count);
     };
-    console.log(newSpark.radius)
     }
 
     if (hiHats[event.key]) {

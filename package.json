@@ -13,8 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "howler": "^2.2.0",
-    "paper": "^0.12.11",
-    "react-scripts": "^3.4.1"
+    "paper": "^0.12.11"
   },
   "homepage": "https://ppduss.github.io/Ratatap",
   "browserslist": {
