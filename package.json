@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "howler": "^2.2.0",
+    "lodash": "^4.17.20",
     "paper": "^0.12.11"
   },
   "homepage": "https://ppduss.github.io/Ratatap",
